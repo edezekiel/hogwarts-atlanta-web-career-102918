@@ -19,7 +19,7 @@ const pigMap = {
   'augustus_gloop': aug,
   'bay_of_pigs': bay,
   'cherub': che,
-  'cherub': chr,
+  'cherub2': chr,
   'galaxy_note': gal,
   'leggo_my_eggo': leg,
   'mudblood': mud,
@@ -34,8 +34,10 @@ const pigMap = {
 
 export default class PigTile extends Component {
   render() {
+    console.log(this.props)
     return (
-      <h1>PigTile</h1>
+      <h1>hi piggy</h1>
+
     )
   }
 }
