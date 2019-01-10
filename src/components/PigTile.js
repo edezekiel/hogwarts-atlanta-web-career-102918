@@ -16,20 +16,20 @@ import tru from '../hog-imgs/truffleshuffle.jpg'
 import React, { Component } from 'react';
 
 const pigMap = {
-  'augustus_gloop': aug,
-  'bay_of_pigs': bay,
-  'cherub': che,
-  'cherub2': chr,
-  'galaxy_note': gal,
-  'leggo_my_eggo': leg,
-  'mudblood': mud,
-  'piggy_smalls': pig,
-  'porkchop': por,
-  'rainbowdash': rai,
-  'sobriety': sob,
-  'the_prosciutto_concern': the,
-  'trouble': tro,
-  'truffleshuffle': tru
+  'Augustus Gloop': aug,
+  'Bay of Pigs': bay,
+  'Cherub': che,
+  'Cherub2': chr,
+  'Galaxy Note': gal,
+  'Leggo My Eggo': leg,
+  'Mudblood': mud,
+  'Piggy smalls': pig,
+  'Porkchop': por,
+  'Rainbowdash': rai,
+  'Sobriety': sob,
+  'The Prosciutto Concern': the,
+  'Trouble': tro,
+  'TruffleShuffle': tru
 }
 
 export default class PigTile extends Component {
@@ -37,7 +37,12 @@ export default class PigTile extends Component {
     console.log(this.props)
     return (
       <div className= "ui eight wide column">
-        <h1 className="pigTile">{this.props.name}</h1>
+        <div className= "ui card">
+        <div className="image">
+    <img src={pigMap[`${this.props.name}`]} />
+  </div>
+          <div className="content">{this.props.name}</div>
+        </div>
       </div>
 
     )
