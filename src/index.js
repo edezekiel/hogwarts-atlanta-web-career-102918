@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import PigPen from './components/PigPen';
 import 'semantic-ui-css/semantic.min.css'
 import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<PigPen />, document.getElementById('root'));
