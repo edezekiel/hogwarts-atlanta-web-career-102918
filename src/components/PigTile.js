@@ -36,7 +36,9 @@ export default class PigTile extends Component {
   render() {
     console.log(this.props)
     return (
-      <h1>hi piggy</h1>
+      <div className= "ui eight wide column">
+        <h1 className="pigTile">{this.props.name}</h1>
+      </div>
 
     )
   }

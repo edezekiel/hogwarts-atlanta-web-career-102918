@@ -8,9 +8,9 @@ import PigTile from './PigTile.js'
 
 class PigPen extends Component {
 
-  generatePigTiles = () => hogs.map((pig, i) =>
+  generatePigTiles = () => hogs.map((pig, idx) =>
       <PigTile
-          key={i}
+          key={idx}
           name={pig.name}
           specialty={pig.specialty}
           greased={pig.greased}
@@ -23,10 +23,11 @@ class PigPen extends Component {
   render() {
 
     return (
-      <div className="PigPen">
-        <h1>PigPen</h1>
-          < Nav />
-        {this.generatePigTiles()}
+      <div className="ui container">
+        <Nav />
+        <div className="PigPen ui grid container">
+          {this.generatePigTiles()}
+        </div>
       </div>
     )
   }
