@@ -28,21 +28,12 @@ class PigPen extends Component {
     />
   )
 
-  showPig = (truthTest) => {
-    if (truthTest) {
-      console.log(truthTest)
-      return this.generatePigTiles()
-    } else {
-      return this.generatePigDetails()
-    }
-  }
-
   render() {
     return (
       <div className="ui container">
         <Nav />
         <div className="PigPen ui grid container">
-          {this.showPig(this.state.displayTile)}
+          {this.state.displayTile ? this.generatePigTiles() : this.generatePigDetails()}
         </div>
       </div>
     )
