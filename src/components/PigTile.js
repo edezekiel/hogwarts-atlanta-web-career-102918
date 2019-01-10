@@ -38,13 +38,12 @@ export default class PigTile extends Component {
     return (
       <div className= "ui eight wide column">
         <div className= "ui card">
-        <div className="image">
-    <img src={pigMap[`${this.props.name}`]} />
-  </div>
+          <div className="image">
+            <img src={pigMap[`${this.props.name}`]} />
+          </div>
           <div className="content">{this.props.name}</div>
         </div>
       </div>
-
     )
   }
 }
