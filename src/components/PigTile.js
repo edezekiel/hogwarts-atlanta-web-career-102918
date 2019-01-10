@@ -33,10 +33,14 @@ const pigMap = {
 }
 
 export default class PigTile extends Component {
+
+
   render() {
     console.log(this.props)
     return (
-      <div className= "ui eight wide column">
+      <div className= "ui eight wide column"
+            onClick={this.props.toggleDisplay}
+      >
         <div className= "ui card">
           <div className="image">
             <img src={pigMap[`${this.props.name}`]} />

@@ -11,10 +11,15 @@ class PigPen extends Component {
 
   state = {displayTile: true}
 
+  selectDisplay = () => {
+    this.setState({
+      displayTile: !this.state.displayTile})
+  }
   generatePigTiles = () => hogs.map((pig, idx) =>
       <PigTile
         key={idx}
         name={pig.name}
+        toggleDisplay={this.selectDisplay}
       />
     )
 
@@ -25,6 +30,7 @@ class PigPen extends Component {
       greased={pig.greased}
       weight={pig['weight as a ratio of hog to LG - 24.7 Cu. Ft. French Door Refrigerator with Thru-the-Door Ice and Water']}
       medal={pig['highest medal achieved']}
+      toggleDisplay={this.selectDisplay}
     />
   )
 
